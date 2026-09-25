@@ -50,3 +50,12 @@ The model is currently executing a 10-day continuous pre-training loop.
 * **Current Trajectory:** Steadily converging down towards the 2.x range as it learns the statistical structures of the English language. 
 
 Once pre-training concludes, the model will proceed to the **Supervised Fine-Tuning (SFT)** phase (`finetune.py`) using a conversational Q&A dataset to transform it from a base completion model into an interactive chatbot (`chat.py`).
+
+## 🚀 Future Roadmap
+
+To further mature the project into a production-grade machine learning pipeline, the following milestones are planned:
+
+1. **Exploratory Data Analysis (EDA) Reports:** Implement comprehensive EDA notebooks to analyze token distributions, document length variances, and vocabulary density within the training corpus to better inform future data mixing strategies.
+2. **Feature Engineering:** Extend the data pipeline to support advanced feature extraction, such as masking specific entities, augmenting text with structural metadata, and creating specialized sub-datasets for domain-specific fine-tuning.
+3. **Unit Testing:** Integrate a robust testing suite (e.g., `pytest`) targeting the core mathematical operations within the Custom Attention Mechanism and Layer Norm blocks to ensure stability during scaling.
+4. **Anomaly Detection:** Deploy an automated anomaly detection system over the training loop telemetry to identify and alert on loss spikes, gradient explosions, or vanishing gradient scenarios before they corrupt the weights.
